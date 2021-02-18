@@ -1,0 +1,129 @@
+:root{
+    --void: #0e0b16;
+    --fuschia: #a239ca;
+    --jewel: #4717f6;
+    --stark: #e7dfdd; 
+}
+
+body {
+    background-color: var(--void);
+    display:flex;
+    flex-direction: column;
+}
+
+.RPS {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--void);
+    border-radius: 50px;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--void);
+}
+
+.sel {
+    visibility: hidden;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50px;
+}
+
+div {
+    display: flex;
+}
+
+img {
+    height: 100px;
+    width: 120px;
+}
+
+.gamedisplay{
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--stark);
+    align-items: center;
+    max-height: 100px;
+}
+
+.botones {
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.botones input {
+    width: 150px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.seleccion {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagevs {
+    flex-grow: 1;
+    align-items: center;
+    padding: 0 10px;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.robot {
+    width: 25%;
+    justify-content: center;
+}
+
+.score {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--jewel);
+    align-items: center;
+    height: 40px;
+}
+
+.WS {
+    max-width: 190px;
+    margin: 0 10px;
+    height: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    align-items: center;
+    background-color: var(--stark);
+    flex-grow: 1;
+    justify-content: center;
+}
+
+h3, h2{
+    width: fit-content;
+    color: var(--void);
+}
+
+.puntuacion {
+    flex-grow: 2;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.puntaje {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: var(--stark);
+    align-items: center;
+    justify-content: center;
+}
+
+.mensaje {
+    background-color: var(--stark);
+    height: 50px;
+    border: var(--void) dashed 1px;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset {
+    visibility: hidden;
+}

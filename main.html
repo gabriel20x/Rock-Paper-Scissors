@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Parper-Scissors</title>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gamedisplay">
+        <div class="botones">
+            <input type="button" value="Rock" onclick="game('rock');">
+            <input type="button" value="Scissor" onclick="game('scissor')">
+            <input type="button" value="Paper" onclick="game('paper')">
+        </div>
+        <div class="seleccion">
+            <div class="RPS">
+                <img src="" alt="" id="RPS1" class="sel">
+            </div>
+            <img src="https://img.lovepik.com/element/40075/2395.png_860.png" alt="" class="imagevs">
+            <div class="RPS" >
+                <img src="" alt="" id="RPS2" class="sel">
+            </div>
+        </div>
+        <div class="robot">
+            <img src="https://www.techopedia.com/images/uploads/6e13a6b3-28b6-454a-bef3-92d3d5529007.jpeg" alt="">
+        </div>
+    </div>
+    <div class="score">
+        <div class="WS" id="WS1">
+            <h3></h3>
+        </div>
+        <div class="puntuacion">
+            <div class="puntaje" id="puntaje1">
+                
+            </div>
+            <div class="puntaje" id="puntaje2">
+
+            </div>
+        </div>
+        <div class="WS" id="WS2">
+            <h3></h3>
+        </div>
+    </div>
+    <div class="mensaje" id="mensaje">
+    </div>
+    <input type="button" value="Reiniciar" id="reset" onclick="reset()" class="reset">
+</body>
+</html>
