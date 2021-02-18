@@ -1,5 +1,5 @@
 const choice = ['rock','paper','scissor'];
-let C=0,P=0,Ronda=0,Img=1;
+let Computerscore=0,Playerscore=0,Ronda=0;
 //  Computer play
 function computerPlay() {
     let a = Math.floor(Math.random()*2.99);
@@ -10,12 +10,12 @@ function computerPlay() {
 function pierde(){
     document.getElementById('WS1').innerHTML="<h3>LOOSE</h3>"
     document.getElementById('WS2').innerHTML="<h3>WIN</h3>"
-    C++;
+    Computerscore++;
 }
 function gana(){
     document.getElementById('WS1').innerHTML="<h3>WIN</h3>"
     document.getElementById('WS2').innerHTML="<h3>LOOSE</h3>"
-    P++;
+    Playerscore++;
 }
 
 // Battle
@@ -65,13 +65,13 @@ function battle(computerPlay,playerPlay) {
 }
 
 function game(playerPlay){
-    if ((P+C)<5 && P<3 && C<3) {
+    if ((Playerscore+Computerscore)<5 && Playerscore<3 && Computerscore<3) {
         RPS(playerPlay,1);
         battle(computerPlay(),playerPlay);
-        document.getElementById("puntaje1").innerHTML= P;
-        document.getElementById("puntaje2").innerHTML= C;
-        if (P==3 || C==3) {
-            if (P>C) {
+        document.getElementById("puntaje1").innerHTML= Playerscore;
+        document.getElementById("puntaje2").innerHTML= Computerscore;
+        if (Playerscore==3 || Computerscore==3) {
+            if (Playerscore>Computerscore) {
                 document.getElementById("mensaje").innerHTML="<h2>Has ganado galan</h2>"
             } else {
                 document.getElementById("mensaje").innerHTML="<h2>Has perdido, mejor suerte para la próxima</h2>"
@@ -98,11 +98,11 @@ function RPS(sel,a){
 }
 
 function reset(){
-    P=0;
-    C=0;
+    Playerscore=0;
+    Computerscore=0;
     Ronda=0;
-    document.getElementById("puntaje1").innerHTML= P;
-    document.getElementById("puntaje2").innerHTML= C;
+    document.getElementById("puntaje1").innerHTML= Playerscore;
+    document.getElementById("puntaje2").innerHTML= Computerscore;
     document.getElementById("RPS1").style.visibility="hidden";
     document.getElementById("RPS2").style.visibility="hidden";
     document.getElementById("mensaje").innerHTML="";
